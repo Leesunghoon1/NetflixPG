@@ -1,0 +1,96 @@
+@import url(/netflex/reset.css);
+
+.header{
+    padding: 40px;
+    border-top: 1px solid rgb(195, 192, 192);
+    border-bottom: 1px solid rgb(195, 192, 192);
+}
+img{
+    width: 150px;
+   
+}
+.login{
+    float: right;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+}
+.login:hover{
+    text-decoration-line: underline;
+}
+
+.mainImg{
+    width: 100%;
+    height: 600px;
+
+}
+.mainBox{
+    margin-left: 40%;
+    margin-right: 40%;
+    height: 100%;
+    text-align: center;
+}
+.imgF{
+    padding-top: 70px;
+    width: 100%;
+    height: 65%;
+}
+.logBtn{
+    width: 75%;
+    height: 60px;
+    background-color: red;
+    border: none;
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+}
+.logBtn:hover{
+    background-color: rgb(157, 14, 14);
+}
+.sel{
+    margin-top: 20px;
+}
+.sele{
+    border: 1px solid #7d7c7c;
+    padding: 12px;
+    background-color: white;
+    color: #454545;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.footText{
+    width: 30%;
+    font-size: 13px;
+}
+
+.bottom{
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    background-color: #f3f3f3;
+}
+.bottomBox{
+    margin-left: 5%;
+    margin-right: 50%;
+    padding-top: 30px;
+}
+.helpBar{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.bottomBox p{
+    color: gray;
+}
+.helpBar a{
+    text-decoration: none;
+    font-size: 15px;
+    color: gray;
+}
+.helpBar a:hover{
+    text-decoration-line: underline;
+}
+
+

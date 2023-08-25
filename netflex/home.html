@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/netflex/home.css">
+    <link rel="stylesheet" href="/netflex/reset.css">
+    <title>홈-넷플렉스</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!-- 슬라이드 링크 -->
+    <script src="swiper.js"></script>
+    <link rel="stylesheet" href="swiper.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- 화살표 아이콘 링크 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+
+<body>
+
+    <!-- 전체 컨테이너 -->
+    <div class="all-container">
+        <!-- 배경이미지, 영상 영역 -->
+        <video src="/netflex/image/쥬라기월드 (online-video-cutter.com) (1).mp4" autoplay
+            poster="/netflex/image/main-img.png" id="main-video"></video>
+
+
+        <!-- -------------추가------------- -->
+        <div id="gradation-box"></div>
+        <!-- -------------추가------------- -->
+
+
+
+        <div class="main-img">
+            <!-- 트레일러 영역 -->
+            <div class="trailer">
+                <div class="trailer-logo"></div>
+                <div class="trailer-info">
+                    화산 폭발이라는 위기를 앞둔 이슬라 누블라. 그곳 공룡들의 보금자리를 찾기 위해 애쓰던 오웬과 클레어는 사악한 계획에 말려든다.
+                </div>
+                <div class="trailer-element">
+                    <div class="trailer-element-left">
+                        <div class="playBtn" onclick="window.location.href='/netflex/play.html'">
+                            <div class="playBtn-icon"><i class="fa-solid fa-play"></i></div>
+                            <div class="playBtn-text" style="margin-left: 10px;">재생</div>
+                        </div>
+
+                        <div class="infoBtn">
+                            <div class="infoBtn-icon"><span class="material-symbols-outlined">info</span></div>
+                            <div class="infoBtn-text" style="margin-left: 10px;">상세정보</div>
+                        </div>
+                    </div>
+                    <div class="replayBtn trailer-element-right">
+                        <div class="replayBtn-icon"><span class="material-symbols-outlined">refresh</span></div>
+                        <div class="ageLimits"><span class="ageLimits-age">12</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 메인영상 상세정보 -->
+            <!-- info video영역 -->
+            <div id="info-container">
+                <div id="video-container">
+                    <video src="/netflex/image/인포_쥬라기월드.mp4" id="info-video" autoplay preload="auto"></video>
+                    <div id="info-close-btn">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </div>
+                    <div id="inner-info">
+                        <div id="info-logo"></div>
+                        <div id="info-playBtn">
+                            <div class="playBtn2" onclick="window.location.href='/netflex/play.html'">
+                                <div class="playBtn-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playBtn-text" style="margin-left: 10px;">재생</div>
+                            </div>
+                            <div class="circle-btn" id="add-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="circle-btn" id="like-btn">
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </div>
+                            <div id="mute-btn" onclick="soundOnOff()">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 메인 인포 설명 -->
+                <div id="info-text"></div>
+
+                <!-- 관련 목록 제목 -->
+                <div id="sub-info">
+                    <div id="info-list1"></div>
+                    <div id="info-list2"></div>
+                    <div id="info-list3"></div>
+                    <div id="info-list4"></div>
+                    <div id="info-list5"></div>
+                    <div id="info-list6"></div>
+                    <div id="info-list7"></div>
+                </div>
+
+            </div>
+
+            <!-- 헤드 컨테이너 -->
+            <div id="header-container-background"></div>
+            <div class="header-container">
+
+                <!-- 가상영역 div (마우스 오버시 이벤트 종료용) -->
+                <div id="virtualbox"></div>
+                <div id="virtualbox2"></div>
+                <div id="virtualbox3"></div>
+
+                <!-- 상측 메뉴 영역 -->
+                <div class="nav-header">
+                    <!-- (상측)좌측 메뉴 영역 -->
+                    <a href="" class="netflex-logo"><img src="/netflex/image/2850ab84b3038290ff7365f396704c27.png"></a>
+                    <ul class="nav-header-menu1">
+                        <li>
+                            <a href="">홈</a>
+                        </li>
+                        <li>
+                            <a href="">시리즈</a>
+                        </li>
+                        <li>
+                            <a href="">영화</a>
+                        </li>
+                        <li>
+                            <a href="">NEW! 요즘 대세 콘텐츠</a>
+                        </li>
+                        <li>
+                            <a href="">내가 찜한 콘텐츠</a>
+                        </li>
+                        <li>
+                            <a href="">언어별로 찾아보기</a>
+                        </li>
+                    </ul>
+                    <!-- (상측)우측 메뉴영역 -->
+                    <div class="nav-header-menu2">
+                        <!-- search -->
+                        <div class="nav-element">
+                            <div id="search-nav">
+                                <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                                <input type="text" placeholder="제목,사람,장르" id="search-box">
+                            </div>
+                        </div>
+                        <!-- 키즈 -->
+                        <div class="nav-element nav-kids"><a href="">키즈</a></div>
+                        <!-- 알림 -->
+                        <div class="nav-element" id="notification">
+                            <i class="fa-regular fa-bell" id="bell"></i>
+                            <div id="notification-pane">
+                                <i class="fa-solid fa-caret-up"></i>
+                                <span>최근 알림 메시지가 없습니다.</span>
+                            </div>
+                        </div>
+                        <!-- 유저메뉴 -->
+                        <div class="nav-element" id="user">
+                            <div class="user-nav">
+                                <a href="">
+                                    <div id="user-icon">
+                                        <img id="user-img"
+                                            src="/netflex/image/AAAABW_duJA8GKT7ULqso3woth9-Etm8F1p-QXJpyVT57-KTAP71wXR-CouAeCcQc5h_JyUZxOa4MliOn0iWlXwB7QqUThBJibg.png"
+                                            alt="">
+                                    </div>
+                                    <div id="arrow-down">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                    <div class="user-elemList">
+                                        <div class="user-elem">
+                                            <img id="user-menu-icon"
+                                                src="/netflex/image/AAAABZcS0LKQ-3XuTxhQF-1JML_cuWEmN4I9u9QpTxGD5zgePKylSz2LZ6KVQLfAtf4VDjK7ssWaZ21V9Z9kW7GoHCcABS1OzC4.png"
+                                                alt="">
+                                            <span><a href="" class="user-menu">아무개</a></span>
+                                        </div>
+                                        <div class="user-elem">
+                                            <i class="fa-solid fa-pencil"></i>
+                                            <span><a href="" class="user-menu">프로필 관리</a></span>
+                                        </div>
+                                        <div class="user-elem">
+                                            <i class="fa-regular fa-address-card"></i>
+                                            <span><a href="" class="user-menu">프로필 이전</a></span>
+                                        </div>
+                                        <div class="user-elem">
+                                            <i class="fa-regular fa-user"></i>
+                                            <span><a href="" class="user-menu">계정</a></span>
+                                        </div>
+                                        <div class="user-elem">
+                                            <i class="fa-regular fa-circle-question"></i>
+                                            <span><a href="customerCenter.html" class="user-menu">고객센터</a></span>
+                                        </div>
+                                        <div class="user-elem" id="user-last-elem">
+                                            <a href="main.html">넷플릭스에서 로그아웃</a>
+                                        </div>
+                                        <i class="fa-solid fa-caret-up" id="user-arrowUp"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 -->
+    <div class="slider s0">
+        <div class="inner">
+            <h2 class="slide-title">이성훈 님이 시청 중인 콘텐츠</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide">
+                    <div class="square one">
+                        <div class="cover c1">
+                            <video class="video" src="/netflex/image/content2/종이의 집 _ 시리즈 예고편 _ 넷플릭스.mp4"></video>
+                        </div>
+                        <div class="text">
+                            <button>
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </button>
+                            <button class="expan">
+                                <span class="material-symbols-outlined" i="">expand_more</span>
+                            </button><br>
+                            <div class="detail">
+                                <div>
+                                    <img src="image/나이제한4.png" alt="" width="15px" height="15px">
+                                </div>
+                                <div>
+                                    <span>에피소드 12개</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined" id="hd">hd</span><br>
+                                </div>
+                            </div>
+                            <ul class="seriesFeature" type="desc">
+                                <li>흥미진진한</li>
+                                <li>긴장감 넘치는</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="swiper-slide">
+                    <div class="square one">
+                        <div class="cover c2">
+                            <video class="video" src="/netflex/image/content2/더 글로리.mp4"></video>
+                        </div>
+                        <div class="text">
+                            <button>
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </button>
+                            <button class="expan">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button><br>
+                            <div class="detail">
+                                <div>
+                                    <img src="image/나이제한4.png" alt="" width="15px" height="15px">
+                                </div>
+                                <div>
+                                    <span>에피소드 16개</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined" id="hd">hd</span><br>
+                                </div>
+                            </div>
+                            <ul class="seriesFeature" type="desc">
+                                <li>어두운</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="swiper-slide">
+                    <div class="square one">
+                        <div class="cover c3">
+                            <video class="video" src="/netflex/image/content2/설국열차.mp4"></video>
+                        </div>
+                        <div class="text">
+                            <button>
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </button>
+                            <button class="expan">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button><br>
+                            <div class="detail">
+                                <div>
+                                    <img src="image/나이제한3.png" alt="" width="15px" height="15px">
+                                </div>
+                                <div>
+                                    <span>시즌 3개</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined" id="hd">hd</span><br>
+                                </div>
+                            </div>
+                            <ul class="seriesFeature" type="desc">
+                                <li>폭력적인</li>
+                                <li>긴장감 넘치는</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="square one">
+                        <div class="cover c4">
+                            <video class="video" src="/netflex/image/content2/오징어게임.mp4"></video>
+                        </div>
+                        <div class="text">
+                            <button>
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </button>
+                            <button class="expan">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button><br>
+                            <div class="detail">
+                                <div>
+                                    <img src="image/나이제한4.png" alt="" width="15px" height="15px">
+                                </div>
+                                <div>
+                                    <span>시즌 1개</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined" id="hd">hd</span><br>
+                                </div>
+                            </div>
+                            <ul class="seriesFeature" type="desc">
+                                <li>긴장감 넘치는</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="square one">
+                        <div class="cover c5">
+                            <video class="video" src="/netflex/image/content2/브래이킹 배드.mp4"></video>
+                        </div>
+                        <div class="text">
+                            <button>
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </button>
+                            <button class="expan">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button><br>
+                            <div class="detail">
+                                <div>
+                                    <img src="image/나이제한4.png" alt="" width="15px" height="15px">
+                                </div>
+                                <div>
+                                    <span>시즌 5개</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined" id="hd">hd</span><br>
+                                </div>
+                            </div>
+                            <ul class="seriesFeature" type="desc">
+                                <li>폭력적인</li>
+                                <li>어두운</li>
+                                <li>스릴러</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="square one">
+                        <div class="cover c6">
+                            <video class="video" src="/netflex/image/content2/뤼팽.mp4"></video>
+                        </div>
+                        <div class="text">
+                            <button>
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined">thumb_up</span>
+                            </button>
+                            <button class="expan">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button><br>
+                            <div class="detail">
+                                <div>
+                                    <img src="image/나이제한3.png" alt="" width="15px" height="15px">
+                                </div>
+                                <div>
+                                    <span>파트 2개</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-outlined" id="hd">hd</span><br>
+                                </div>
+                            </div>
+                            <ul class="seriesFeature" type="desc">
+                                <li>위트있는</li>
+                                <li>흥미진진</li>
+                                <li>긴장감 넘치는</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <span class="btn btn_prev s0">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next s0">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">새로 올라온 콘텐츠</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/7.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/8.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/9.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/10.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/11.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/12.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/13.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/14.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">평단의 찬사를 받은 한국 시리즈</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/15.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/16.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/17.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/18.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/19.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/20.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">지금 뜨는 콘텐츠</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/61.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/22.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/23.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/24.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/28.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/25.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/26.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/27.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">블록버스터 SF & 판타지</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/29.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/30.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/31.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/32.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/33.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/34.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/35.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/36.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">짝패와 비슷한 콘텐츠</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/37.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/38.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/39.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/40.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/41.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/42.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/43.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/44.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">평론가 호평 경찰 영화</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/45.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/46.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/47.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/48.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/49.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/50.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/51.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/52.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="slider s1">
+        <div class="inner">
+            <h2 class="slide-title">평론가 호평 경찰 영화</h2>
+            <ul class="swiper-wrapper slide_list">
+                <li class="swiper-slide"><img src="/netflex/image/content2/53.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/54.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/55.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/56.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/57.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/58.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/59.jpg" alt="" id="slide-img"></li>
+                <li class="swiper-slide"><img src="/netflex/image/content2/52.jpg" alt="" id="slide-img"></li>
+            </ul>
+        </div>
+        <span class="btn btn_prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </span>
+        <span class="btn btn_next">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </span>
+    </div>
+
+    <div class="footer">
+
+
+        <div class="bba">
+            <!-- --------------------수정------------------- -->
+            <div class="abc">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="abc">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="abc">
+                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="abc">
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <!-- --------------------수정------------------- -->
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <a href="https://help.netflix.com/ko/node/412">화면해설</a>
+                <a href="https://ir.netflix.net/ir-overview/profile/default.aspx">투자 정보(IR)</a>
+                <a href="https://help.netflix.com/legal/privacy">법적 고지</a>
+            </div>
+            <div class="col">
+                <a href="#">고객 센터</a>
+                <a href="https://devices.netflix.com/ko/">입사 정보</a>
+                <a href="https://help.netflix.com/legal/termsofuse">쿠키 설정</a>
+            </div>
+            <div class="col">
+                <a href="#">기프티카드</a>
+                <a href="#">이용 약관</a>
+                <a href="https://help.netflix.com/legal/corpinfo">회사 정보</a>
+            </div>
+            <div class="col">
+                <a href="https://fast.com/ko/">미디어 센터</a>
+                <a href="https://help.netflix.com/legal/notices">개인 정보</a>
+                <a href="https://www.netflix.com/kr/browse/genre/839338">문의 하기</a>
+            </div>
+        </div>
+        <div class="slide-title">
+            <div class="copyright-txt">넷플릭스 대한민국</div>
+        </div>
+        <p class="bottom-aa">넷플릭스 대한민국</p>
+        <div>
+            <!-- -----------------수정------------------br태그추가 -->
+            <p class="bottom-aa">
+                넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587 <br>
+                대표: 레지널드 숀 톰프슨 <br>
+                이메일 주소: korea@netflix.com <br>
+                주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161 <br>
+                사업자등록번호: 165-87-00119 <br>
+                클라우드 호스팅: Amazon Web Services Inc. <br>
+                공정거래위원회 웹사이트 <br>
+            </p>
+            <!-- -----------------수정------------------br태그추가 -->
+        </div>
+
+
+        <script src="ss.js"></script>
+        <script src="home.js"></script>
+        <script src="imagehover.js"></script>
+</body>
+
+</html>

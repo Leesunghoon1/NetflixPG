@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Website Clone - Easy Tutorials</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="/netflex/image/로고.png" class="logo">
+            <div>
+                <select onchange="redirect(this)" class="head-box">
+                    <option value="ko-KR">한국어</option>
+                    <option value="en-US">English</option>
+                </select>
+               <a href="/netflex/login.html"> <button>로그인</button></a>
+            </div>
+        </nav>
+        <!-- 중간 -->
+        <div class="header-content">
+            <h1>영화, 시리즈 등을 무제한으로</h1>
+            <h3>어디서나 자유롭게 시청하세요. 해지는 언제든 가능합니다.</h3>
+            <p>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+            <form class="email-signup">
+                <input type="email" placeholder="이메일 주소" required id="login_input">
+                <button type="button" id="login_distinction">시작하기</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- 중간 밑 -->
+    <div class="features"> 
+        <div class="row">
+            <div class="text-col">
+                <h2>TV로 즐기세요</h2>
+                <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 
+                    블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+            </div>
+            <div class="img-col">
+                <div class="img-col-did">
+                <img src="/netflex/image/tv.png" >
+                <div class="img-col-did-aa">
+                    <video class="ae2-video" video autoplay muted loop 
+                    poster="/netflex/image/tv.png"
+                    >
+                    <source src="/netflex/image/video-tv-0819.m4v" type="video/mp4">
+                </div>
+                </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+        <div class="features"> 
+        <div class="row">
+            <div class="img-col-did">
+                <img src="/netflex/image/tv.png" >
+                <div class="img-col-did-aa">
+                    <video class="ae2-video" video autoplay muted loop 
+                    poster="/netflex/image/tv.png"
+                    >
+                    <source src="/netflex/image/video-devices.m4v" type="video/mp4">
+                </div>
+                </video>
+                </div>
+                
+            <div class="text-col">
+                <h2>어디서나 자유롭게 시청하세요</h2>
+                <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 
+                    블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+            </div>
+            <div class="img-col">
+                
+            </div>
+        </div>
+    </div>
+    <hr>
+<!-- 밑에 -->
+<div class="features"> 
+        <div class="row">
+            <div class="text-col">
+                <h2>어린이 전용 
+                    프로필을 만들어 보세요</h2>
+                <p>자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험. 
+                    자녀에게 이 특별한 경험을 선물하세요. 넷플릭스 회원이라면 무료입니다.</p>
+            </div>
+            <div class="img-col">
+                <div class="img-col-did">
+                <img src="/netflex/image/키즈.png" >
+                <div class="img-col-did-aa">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <hr>
+    <div class="features"> 
+        <div class="row">
+            <div class="img-col">
+                <div class="img-col-did">
+                <img src="/netflex/image/아이폰.jpg" >
+                <div class="ipon-a">
+                    <div class="ipon-a-b">
+                    <img class="ipon-a-a-b" src="/netflex/image/boxshot.png">
+                    </div>
+                    <div class="ipon-a-b-c">
+                        <div class="ipon-a-a-b-b">기묘한이야기</div>
+                        <div class="ipon-a-a-b-c">저장중...</div>
+                    </div>
+                    <div class="ipon-a-a-b-c-b" arra-hiden "true"></div>
+                </div>
+                <div class="img-col-did-aa">
+                </div>
+            </div>
+        </div>
+        <div class="text-col">
+            <h2>즐겨 보는 콘텐츠를 저장해 오프라인으로 시청하세요</h2>
+            <p>광고 없는 멤버십에서만 이용 가능합니다.</p>
+        </div>
+    </div>
+
+    <!-- faq -->
+    <div class="faq">
+        <h2>자주 묻는 질문</h2>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first">
+                <label for="first">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</label>
+                <div class="content">
+                    <p>넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+                        마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second">
+                <label for="second">넷플릭스란 무엇인가요?</label>
+                <div class="content">
+                    <p>넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다.
+                        저렴한 월 요금으로 원하는 시간에 원하는 만큼 즐길 수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운 시리즈와 영화가 제공됩니다.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="third">
+                <label for="third">넷플릭스 요금은 얼마인가요?</label>
+                <div class="content">
+                    <p>스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한 디바이스에서 월정액 요금 하나로 넷플릭스를 시청하세요. 
+                        멤버십 요금은 월 5,500원부터 17,000원까지 다양합니다. 추가 비용이나 약정이 없습니다.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fourth">
+                <label for="fourth">어디에서 시청할 수 있나요?</label>
+                <div class="content">
+                    <p>언제 어디서나 시청할 수 있습니다. 넷플릭스 계정으로 로그인하면 PC에서 netflix.com을 통해 바로 시청할 수 있으며, 인터넷이 연결되어 있고 넷플릭스 앱을 지원하는 디바이스(스마트 TV, 스마트폰, 태블릿, 스트리밍 미디어 플레이어, 게임 콘솔 등)에서도 언제든지 시청할 수 있습니다.
+                        iOS, Android, Windows 10용 앱에서는 좋아하는 시리즈를 저장할 수도 있습니다. 저장 기능을 이용해 이동 중이나 인터넷에 연결할 수 없는 곳에서도 시청하세요. 넷플릭스는 어디서든 함께니까요.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fifth">
+                <label for="fifth">멤버십을 해지하려면 어떻게 하나요?</label>
+                <div class="content">
+                    <p>넷플릭스는 부담 없이 간편합니다. 성가신 계약도, 약정도 없으니까요. 멤버십 해지도 온라인에서 클릭 두 번이면 완료할 수 있습니다. 해지 수수료도 없으니 원할 때 언제든 계정을 시작하거나 종료하세요.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="sixth">
+                <label for="sixth">아이들이 넷플릭스를 봐도 좋을까요?</label>
+                <div class="content">
+                    <p>멤버십에 넷플릭스 키즈 환경이 포함되어 있어 자녀가 자기만의 공간에서 가족용 시리즈와 영화를 즐기는 동안 부모가 이를 관리할 수 있습니다.
+                        키즈 프로필과 더불어 PIN 번호를 이용한 자녀 보호 기능도 있어, 자녀가 시청할 수 있는 콘텐츠의 관람등급을 제한하고 자녀의 시청을 원치 않는 특정 작품을 차단할 수도 있습니다..</p>
+                </div>
+            </li>
+        </ul>
+        <small>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</small>
+        <form class="email-signup">
+            <input type="email" placeholder="이메일 주소" required>
+            <button type="submit" class="aniAfterMain">시작하기</button>
+        </form>
+    </div>
+<!-- 가장밑 -->
+    <div class="footer">
+        <h2>질문이 있으신가요? 문의 전화:  011-1111-2222</h2>
+
+        <div class="row">
+            <div class="col">
+                <a href="https://help.netflix.com/ko/node/412">자주 묻는 질문</a>
+                <a href="https://ir.netflix.net/ir-overview/profile/default.aspx">투자 정보(IR)</a>
+                <a href="https://help.netflix.com/legal/privacy">개인정보 처리방침</a>
+                <a href="https://media.netflix.com/ko/">미디어 센터</a>
+            </div>
+        <div class="col">
+            <a href="#">고객 센터</a>
+            <a href="https://jobs.netflix.com/">입사 정보</a>
+            <a href="https://devices.netflix.com/ko/">넷플릭스 지원 디바이스</a>
+            <a href="https://help.netflix.com/legal/termsofuse">이용 약관</a>
+        </div>
+        <div class="col">
+            <a href="#">계정</a>
+            <a href="#">쿠키 설정</a>
+            <a href="https://help.netflix.com/legal/corpinfo">회사 정보</a>
+            <a href="https://help.netflix.com/ko/contactus">문의하기</a>
+        </div>
+        <div class="col">
+            <a href="https://fast.com/ko/">속도 테스트</a>
+            <a href="https://help.netflix.com/legal/notices">법적 고지</a>
+            <a href="https://www.netflix.com/kr/browse/genre/839338">오직 넷플릭스에서</a>
+        </div>
+       
+    </div>
+    <div class="aa2a2">
+        <div class="copyright-txt">넷플릭스 대한민국</div>
+    </div>
+        <p class="bottom-aa">넷플릭스 대한민국</p>
+        <div>
+            <p class="bottom-aa">
+                넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587
+대표: 레지널드 숀 톰프슨
+이메일 주소: korea@netflix.com
+주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161
+사업자등록번호: 165-87-00119
+클라우드 호스팅: Amazon Web Services Inc.
+공정거래위원회 웹사이트
+            </p>
+        </div>
+
+        <script>
+            let logindistinction=document.getElementById('login_distinction');
+            let payedAccount='aaa@naver.com'    //지정 이메일(가입된 이메일)
+            function redirect(element) {
+                var selectedValue = element.value;
+                
+                // 선택된 값에 따라 리다이렉션 처리
+                if (selectedValue === "ko-KR") {
+                    window.location.href = "/netflex/main.html";
+                } else if (selectedValue === "en-US") {
+                    window.location.href = "/netflex/mainEg.html";
+                }
+            }
+            window.redirect = redirect;
+            
+            logindistinction.addEventListener('click',()=>{ 
+                //입력한값이 지정 이메일이랑 다르면 home으로 넘어가고 그 외에는 membership페이지로 이동
+                  let logininput=document.getElementById('login_input').value;
+                  if(logininput==payedAccount)
+                  {
+                    location.href='logo_animation.html'
+                  }
+                  else
+                  {
+                    location.href='membership.html'
+                  }
+
+              })
+        </script>
+    
+</body>
+</html>

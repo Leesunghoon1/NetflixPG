@@ -1,0 +1,256 @@
+@import url(/netflex/reset.css);
+
+.header{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+img{
+    width: 120px;
+    margin-top: 20px;
+}
+.header h1{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.box1{
+    text-align: center;
+}
+.input{
+    width: 50%;
+    padding: 10px;
+}
+.mainBox{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.subBox{
+    padding-top: 20px;
+    float: right;
+}
+.subBox button{
+    height: 30px;
+    border-radius: 5px;   
+    color: white;
+}
+.netflex{
+    border: 1px solid gray;
+    background-color: black;
+    cursor: pointer;
+}
+.login{
+    border: none;
+    background-color: red;
+    width: 80px;
+    cursor: pointer;
+}
+.netflex:hover{
+    border: 1px solid white;
+}
+.login:hover{
+    background-color: rgb(107, 29, 29);
+}
+.mid{
+    width: 100%;
+    height: 250px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #dedede;
+}
+.midBox{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 20px;
+}
+.text1{
+    font-weight: 700;
+    font-size: 24px;
+}
+.midBox2{
+    margin-top: 20px;
+}
+.loginBtn{
+    background-color: #e50914 ;
+    border: none;
+    color: white;
+    font-weight: 700;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+.loginBtn:hover{
+    background-color: rgb(165, 12, 12);
+}
+.membershipBtn{
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+    font-weight: 700;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+.membershipBtn:hover{
+    background-color: red;
+    color: white;
+}
+.midBox p {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    
+}
+.midBox3{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 16px;
+    color: #221f1f;
+    text-decoration: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    justify-content: left;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.midBox3 div{
+    margin-right: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(196, 194, 194);
+}
+.aa{
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 5px;
+}
+.midBox3 a{
+    text-decoration: none;
+    color: black;
+   
+}
+.helpText{
+    margin-left: 10px;
+}
+.helpText:hover{
+    color: red;
+    text-decoration-line:underline;
+
+}
+.material-symbols-outlined{
+    float: left;
+}
+.midText{
+    width: 100%;
+    
+}
+.textBox{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+.textBox h2{
+    font-weight: 700;
+    font-size: 20px;
+}
+.textBox a{
+    text-decoration: none;
+    color: rgb(79, 79, 79);
+    font-size: 15px;
+}
+.textBox a:hover{
+    text-decoration-line: underline;
+    color: #e50914;
+}
+.category{
+    width: 240px;
+    padding-right: 24px;
+    float: left;
+    margin-bottom: 100px;
+    
+}
+.category h2{
+    margin-bottom: 30px
+}
+.bottom{
+    padding-top: 30px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    clear: both;
+    background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%),#000;
+}
+
+.bottomBox{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.bottomHelp{
+    display: flex;
+    padding-bottom: 50px;
+    border-bottom: 1px solid white;
+}
+.bottomBox h3{
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+.bottomBtn{
+    margin-left: 40px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.bottomBtn:hover{
+    background-color: rgb(202, 208, 212);
+}
+.lag{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.lagSelect{
+    border: 1px solid #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 80px;
+    background-color: black;
+    color: #B3B3B3;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.lagSelect:hover{
+    background-color: rgb(175, 168, 168);
+    color: #dedede;
+}
+.bottomText a{
+    text-decoration: none;
+    color: #ada8a8 ;
+    font-size: 15px;
+}
+.bottomText:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.category .material-symbols-outlined{
+    float: right;
+    color: #e50914;
+}
+.category .material-symbols-outlined:hover{
+    transition: .2s ease-in-out;
+    margin-right: -5px;
+    cursor: pointer;
+}

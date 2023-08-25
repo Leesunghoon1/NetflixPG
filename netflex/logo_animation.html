@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        video {
+            background-size: auto;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <video src="image/Netflix New Logo Animation 2019 (GV3HUDMQ-F8).mp4" autoplay muted></video>
+
+    <script>
+        let link = 'home.html'; //이동할 링크
+        const video = document.querySelector("video");
+
+        video.addEventListener("ended", (event) => {    //영상이 한번끝나면 home 페이지로 이동하는 이벤트
+            location.href=link;
+        });
+    </script>
+</body>
+
+</html>
